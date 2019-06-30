@@ -7,32 +7,32 @@ class LeftBar extends Component {
             <div className="page-sidebar navbar-collapse collapse">
               <ul className="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed={200}>
               <li className="nav-item start">
-                <NavLink  to="/" activeStyle={{ color: 'red' }}> 
+                <NavLink  to="/home" activeStyle={{ backgroundColor: '#B9ECF0' }}> 
                     <i className="icon-bar-chart" />  
                     <span className="title">Dashboard</span>
                 </NavLink>
                 </li>
                 <li className="nav-item start" >
-                <NavLink  to="/engineer" activeStyle={{ color: 'red' }}> 
+                <NavLink  to="/engineer" activeStyle={{ backgroundColor: '#B9ECF0' }}> 
                     <i className="icon-bar-chart" />
                     <span className="title">Engineer</span>
                 </NavLink>
                 </li>
                 <li className="nav-item start">
-                <NavLink  to="/team" activeStyle={{ color: 'red' }}> 
+                <NavLink  to="/team" activeStyle={{ backgroundColor: '#B9ECF0' }}> 
                     <i className="icon-bar-chart" />
                     <span className="title">Team</span>
                   </NavLink>
                 </li>
                 <li className="nav-item start">
-                <NavLink  to="/team" activeStyle={{ color: 'red' }}> 
+                <NavLink  to="/project" activeStyle={{ backgroundColor: '#B9ECF0' }}> 
                     <i className="icon-bar-chart" />
                     <span className="title">Project</span>
                     
                   </NavLink>
                 </li>
                 <li className="nav-item start">
-                <NavLink  to="/team" activeStyle={{ color: 'red' }}> 
+                <NavLink  to="/user" activeStyle={{ backgroundColor: '#B9ECF0' }}> 
                     <i className="icon-bar-chart" />
                     <span className="title">User</span>
                     <span className="selected" />

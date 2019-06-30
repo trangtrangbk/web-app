@@ -1,30 +1,24 @@
 import React, { Component } from 'react';
-import Header from '../../Header';
-import HeaderContent from '../../HeaderContent';
-import LeftBar from '../../LeftBar';
-import Footer from '../../Footer';
-import Content from './Content';
+import TableData from './TableData';
 
 class TeamIndex extends Component {
     render() {
         return (
-        <div>
-        <Header />
-        <div className="container-fluid">
-            <div className="page-content page-content-popup">
-                <HeaderContent />
-                <LeftBar />
-                <div className="page-fixed-main-content">
-                    <Content />
-                    <div className="col-md-6">
-                    </div>
-                    <div className="clearfix"></div>
+            <div className="row">
+            <div className="col-md-24">
+              <div className="portlet box green">
+                <div className="portlet-title">
+                  <div className="caption">
+                    <i />Team Table </div>
                 </div>
-               <Footer />
+                <div className="portlet-body">
+                  <a href='abc' className="btn btn-outline btn-circle blue btn-sm blue">
+                    <i className="fa fa-edit" /> Add</a>
+                  <TableData />
+                </div>
+              </div>
             </div>
-        </div>       
-        <div className="quick-nav-overlay"></div>
-        </div>
+          </div>
         );
     }
 }

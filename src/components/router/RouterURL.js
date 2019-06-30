@@ -7,13 +7,12 @@ import Index from '../index/Index';
 class RouterURL extends Component {
   render() {
     return (
-      <Router>
         <div>
+          <Route exact path="/home" component={Index} />
           <Route exact path="/" component={Index} />
-          <Route path="/engineer" component={EngineerIndex} />
-          <Route path="/team" component={TeamIndex} />
+          <Route exact path="/engineer" component={EngineerIndex} />
+          <Route exact path="/team" component={TeamIndex} />
         </div>
-      </Router>
     );
   }
 }
