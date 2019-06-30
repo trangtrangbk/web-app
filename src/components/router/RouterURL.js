@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import {     BrowserRouter as Router, Route, Link     } from "react-router-dom";
-import Index from '../index/Index';
-import EngineerIndex from '../engineers/index/EngineerIndex';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import TeamIndex from '../team/index/TeamIndex';
+import EngineerIndex from '../engineers/index/EngineerIndex';
+import Index from '../index/Index';
 
 class RouterURL extends Component {
-    render() {
-        return (
-      <div>      
-        <Route exact path="/" component={Index} />
-        <Route exact path="/engineer" component={EngineerIndex} />
-        <Route exact path="/team" component={TeamIndex} />
-        <Route exact path="/project" component={Index} />
-        <Route exact path="/user" component={Index} />
-      </div>
-        );
-    }
+  render() {
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={Index} />
+          <Route path="/engineer" component={EngineerIndex} />
+          <Route path="/team" component={TeamIndex} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default RouterURL;

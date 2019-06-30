@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { NavLink } from 'react-router-dom';
 class Header extends Component {
     render() {
         return (
@@ -7,8 +8,8 @@ class Header extends Component {
             <nav className="navbar" role="navigation">
               <div className="container-fluid">
                 <div className="havbar-header">
-                  <a id="index" className="navbar-brand" href="start.html">
-                    <img src="../assets/layouts/layout6/img/logo.png" alt="Logo" /> </a>
+                  <NavLink to = "/" className="navbar-brand">
+                    <img src="../assets/layouts/layout6/img/logo.png" alt="Logo" /> </NavLink>
                   <div className="topbar-actions">
                     <form className="search-form" action="extra_search.html" method="GET">
                       <div className="input-group">

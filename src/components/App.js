@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import {     BrowserRouter as Router, Route, Link     } from "react-router-dom";
-import Index from './index/Index';
+import RouterURL from './router/RouterURL';
+import { BrowserRouter as Router} from "react-router-dom";
 class App extends Component {
     render() {
         return (
         <div className="App">
           <Router>
-            <Index />
+            <RouterURL />
           </Router>
         </div>
         );

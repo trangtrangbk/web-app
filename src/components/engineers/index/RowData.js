@@ -16,7 +16,7 @@ class RowData extends Component {
                 <i className="fa fa-edit" /> View </a>
               <a href="engineer-edit.html" className="btn btn-outline btn-circle yellow btn-sm yellow">
                 <i className="fa fa-trash-o" /> Edit </a>
-              <a href="engineer-index.html" onclick="return (confirm('DELETE?'))" className="btn btn-outline btn-circle dark btn-sm black">
+              <a href="engineer-index.html"  className="btn btn-outline btn-circle dark btn-sm black">
                 <i className="fa fa-trash-o" /> Delete </a>
             </td>
           </tr>
