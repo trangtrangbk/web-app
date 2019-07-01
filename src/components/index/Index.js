@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../Header';
-import LeftBar from '../LeftBar';
-import HeaderContent from '../HeaderContent';
-import Footer from '../Footer';
 import Action from './Action';
 import Stats from './Stats';
 import Portlet from './Portlet';

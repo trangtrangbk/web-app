@@ -26,7 +26,8 @@ class Stats extends Component {
               </div>
               <div className="details">
                 <div className="number">
-                  <span data-counter="counterup" data-value="12,5">0</span>24 </div>
+                  <span data-counter="counterup" data-value="12">0</span>
+                  </div>
                 <div className="desc"> Team </div>
               </div>
             </a>

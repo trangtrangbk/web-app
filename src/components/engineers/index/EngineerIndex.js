@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TableData from './TableData';
+import { Link } from 'react-router-dom';
 
 class EngineerIndex extends Component {
     
@@ -13,6 +14,8 @@ class EngineerIndex extends Component {
                     <i />Engineer Table </div>
                 </div>
                 <div className="portlet-body"> 
+               <Link to="/engineer/add" className="btn btn-outline btn-circle blue btn-sm blue">
+                  <i className="fa fa-edit"></i> Add  </Link>
                  <TableData />
                 </div>
               </div>

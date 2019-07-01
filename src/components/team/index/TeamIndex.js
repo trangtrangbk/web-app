@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TableData from './TableData';
+import { Link } from "react-router-dom";
 
 class TeamIndex extends Component {
     render() {
@@ -12,8 +13,8 @@ class TeamIndex extends Component {
                     <i />Team Table </div>
                 </div>
                 <div className="portlet-body">
-                  <a href='abc' className="btn btn-outline btn-circle blue btn-sm blue">
-                    <i className="fa fa-edit" /> Add</a>
+                  <Link to="/team/add" className="btn btn-outline btn-circle blue btn-sm blue">
+                    <i className="fa fa-edit" /> Add</Link>
                   <TableData />
                 </div>
               </div>

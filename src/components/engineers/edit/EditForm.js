@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import DatePicker from "react-datepicker";
  
 import "react-datepicker/dist/react-datepicker.css";
-class AddForm extends Component {
+class EditForm extends Component {
   constructor(props){
       super(props);
       this.state = {
@@ -16,34 +16,6 @@ class AddForm extends Component {
       startDate: date
     });
   }
-  isChange = (event)=>{
-    const fieldName = event.target.name;
-    const value  = event.target.value;
-    console.log(event.target.value);
-    this.setState({
-      [fieldName] : value
-    });
-    //pakage to item
-    var item = {};
-    item.id  = this.state.id;
-    item.engName  = this.state.engName;
-    item.fisrtName  = this.state.fisrtName;
-    item.lastName  = this.state.lastName;
-    item.address  = this.state.address;
-    item.experiences  = this.state.experiences;
-    item.phone  = this.state.phone;
-    item.email  = this.state.email;
-    item.skype  = this.state.skype;
-    item.birthday  = this.state.birthday;
-    item.skill  = this.state.skill;
-    item.status  = this.state.status;
-    console.log(item);
-  }
-  submitAddForm = (event)=>{
-    event.preventDefault();  // stop loading
-    console.log(this.state)
-  }
- 
     render() {
         return (
             <div className="portlet light bordered">
@@ -56,50 +28,50 @@ class AddForm extends Component {
             <div className="portlet-body">
               <div className="tab-content">
                 <div className="tab-pane active" id="tab_1_1">
-                  <form role="form" action="abc">
+                  <form>
                     <div className="form-group" style={{textAlign: 'center'}}>     
-                      <img height="130px" src="../assets/layouts/layout6/img/none-avatar.png"  /><br /><br /> 
+                      <img height="130px" src="../assets/layouts/layout6/img/none-avatar.png" alt="abc" /><br /><br /> 
                       <div className="form-group"  style={{width: '100px', marginLeft: '615px'}}>
-                        <input type = "text" name = "engName"  className="form-control"  placeholder="Eng name"/> </div>
+                        <input type = "text" name = "engName" value="Hannah" onChange={(event) =>this.isChange(event)} className="form-control"  placeholder="Eng name"/> </div>
                     </div> 
                     
                     <div className="col-md-6">
                     <div className="form-group">
                       <label className="control-label">First Name</label>
-                      <input type = "text" name= "firstName" className="form-control" /> </div>
+                      <input type = "text" name= "firstName" value="Trang" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     <div className="form-group">
                       <label className="control-label">Last Name</label>
-                      <input type="text" name="lastName" className="form-control" /> </div>
+                      <input type="text" name="lastName" value="Tran" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     <div className="form-group">
                       <label className="control-label">Address</label>
-                      <input type="text" name="address" className="form-control" /> </div>
+                      <input type="text" name="address" value = "Da Nang" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     <div className="form-group">
                       <label className="control-label">Experiences</label>
-                      <input type="text" name="exp" className="form-control" /> </div>
+                      <input type="text" name="exp" value = "1" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     <div className="form-group">
                       <label className="control-label">Phone Number</label>
-                      <input type="text" name="phone" className="form-control" /> </div>
+                      <input type="text" name="phone" value = "123456789" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     </div>   
 
                     <div className="col-md-6">                   
                     <div className="form-group">
                       <label className="control-label">Email</label>
-                      <input type="text" name="email" className="form-control" /> </div>                    
+                      <input type="text" name="email" value = "trang@gmail.com" onChange={(event) =>this.isChange(event)}  className="form-control" /> </div>                    
                     <div className="form-group">
                       <label className="control-label">Skype</label>
-                      <input type="text" name="skype" className="form-control" /> </div>
+                      <input type="text" name="skype"  value = "trang@gmail.com" onChange={(event) =>this.isChange(event)} className="form-control" /> </div>
                     <div className="form-group">
                       <label className="control-label">Birthday</label><br/>
-                      <DatePicker        selected={this.state.startDate}        onChange={this.handleChange}      /> </div>
+                      <DatePicker  selected={this.state.startDate} value="11/20/1998" onChange={this.handleChange}/></div>
                       <div className="form-check">
         <label className="form-check-label"> Skills <br />
-          <input type="checkbox" className="form-check-input" />
+          <input type="checkbox" className="form-check-input" name id defaultValue="checkedValue" defaultChecked />
           JAVA<br />
-          <input type="checkbox" className="form-check-input"/>
+          <input type="checkbox" className="form-check-input" name id defaultValue="checkedValue" defaultChecked />
           React JS<br />
-          <input type="checkbox" className="form-check-input"/>
+          <input type="checkbox" className="form-check-input" name id defaultValue="checkedValue" defaultChecked />
           Node JS<br />
-          <input type="checkbox" className="form-check-input"/>
+          <input type="checkbox" className="form-check-input" name id defaultValue="checkedValue" defaultChecked />
           PHP<br />
         </label>
       </div>
@@ -112,7 +84,7 @@ class AddForm extends Component {
                     </div>    
                     </div>            
                     <div className="margiv-top-10" style={{textAlign: 'center'}}>
-                      <a  className="btn green" onClick = {(event) =>this.submitAddForm(event)}> Add </a>
+                      <a  className="btn green" > SAVE </a>
                     </div>
                   </form>
                 </div>
@@ -123,4 +95,4 @@ class AddForm extends Component {
     }
 }
 
-export default AddForm;
+export default EditForm;
